@@ -1,0 +1,460 @@
+/* =====================================
+   RESET & GLOBAL STYLES (Tema Oscuro)
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* La mejor práctica se mantiene para los archivos que no son de demo */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    background: #1e1e2d; /* Fondo oscuro moderno */
+    color: #f0f4f8; /* Texto claro */
+    line-height: 1.6;
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* Color primario: Verde */
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+h2 {
+    color: #03A9F4; /* Color secundario: Azul */
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid rgba(3, 169, 244, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.intro {
+    text-align: center;
+    color: #90a4ae;
+    font-size: 1.2rem;
+    margin-bottom: 3.5rem;
+    font-weight: 300;
+}
+
+code {
+    background: #37474f; /* Fondo oscuro para código inline */
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    color: #1de9b6; /* Verde menta para código */
+}
+
+/* =====================================
+   SECCIÓN 1: COMPARACIÓN ESTÁTICA
+   ===================================== */
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.box-wrapper {
+    background: #2a2a3a; /* Fondo de sección */
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid #3c3c54;
+    transition: transform 0.3s ease;
+}
+
+.box-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.box-wrapper h2 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: none;
+    color: #FFEB3B; /* Amarillo para destacar el título */
+}
+
+/* LAS DOS CAJAS DEMO (Estática) */
+.box {
+    width: 200px;          
+    padding: 20px;         
+    border-width: 10px;    
+    border-style: solid;
+    margin: 0 auto 1.5rem;
+    min-height: 120px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.content-box {
+    box-sizing: content-box; 
+    border-color: #E91E63; /* Magenta para "el problema" */
+    background-color: #37474f;
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.5); /* Sombra magenta */
+}
+
+.border-box {
+    box-sizing: border-box; 
+    border-color: #1de9b6; /* Menta/Teal para "la solución" */
+    background-color: #37474f;
+    box-shadow: 0 0 20px rgba(29, 233, 182, 0.5); /* Sombra menta */
+}
+
+.box p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: #b0bec5;
+}
+
+.box .result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #FFEB3B; /* Resaltado amarillo */
+    padding: 0.5rem 0;
+    border-top: 1px dashed rgba(255, 235, 59, 0.3);
+}
+
+/* ESTILO CÁLCULOS */
+.calculation {
+    background: #37474f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.content-calculation { border-left-color: #E91E63; }
+.border-calculation { border-left-color: #1de9b6; }
+
+.calculation p {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: #f0f4f8;
+}
+
+.calculation code {
+    display: block;
+    background: #2a2a3a;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.8;
+    color: #b0bec5;
+}
+
+.calculation strong {
+    color: #FFEB3B;
+    font-size: 1.2em;
+}
+
+/* =====================================
+   SECCIONES DE TEXTO (Explanation, Best Practice)
+   ===================================== */
+
+.explanation,
+.best-practice,
+.interactive-demo {
+    background: #2a2a3a;
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid #3c3c54;
+}
+
+/* BENEFICIOS */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.benefit {
+    padding: 1.5rem;
+    background: #37474f;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50; /* Verde para éxito/beneficio */
+    transition: background 0.3s ease;
+}
+
+.benefit:hover {
+    background: #455a64;
+}
+
+.benefit h3 {
+    margin: 0 0 0.5rem 0;
+    color: #1de9b6;
+    font-size: 1.1rem;
+}
+
+.benefit p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #b0bec5;
+}
+
+/* BEST PRACTICE CODE */
+.best-practice pre {
+    background: #1e1e2d;
+    color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px dashed #4CAF50;
+}
+
+.best-practice pre code {
+    background: none;
+    color: #1de9b6;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.highlight-code {
+    color: #FFEB3B;
+    font-weight: 700;
+}
+
+.tip {
+    background: #FFEB3B1A; /* Amarillo con transparencia */
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #FFEB3B;
+    margin: 1rem 0 0 0;
+    color: #f0f4f8;
+}
+
+/* =====================================
+   SECCIÓN 4: DEMO INTERACTIVA
+   ===================================== */
+
+/* CONTROLES (SLIDERS) */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #37474f;
+    border-radius: 12px;
+}
+
+.controls label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    color: #03A9F4;
+}
+
+.controls input[type="range"] {
+    flex: 1;
+    /* Estilo básico de slider para dark mode */
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #546e7a;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FF9800; /* Naranja para el pulgar */
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+
+.controls span {
+    display: inline-block;
+    min-width: 65px;
+    color: #FFEB3B;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+h3.color-palette-title {
+    color: #FF9800; /* Naranja para el nuevo título */
+    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.color-controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    background: #37474f; /* Fondo oscuro para los controles */
+    border-radius: 12px;
+}
+
+.color-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.color-group label {
+    font-weight: 600;
+    color: #b0bec5;
+    font-size: 0.9rem;
+}
+
+.color-group input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.color-group input[type="color"]:hover {
+    transform: scale(1.1);
+}
+
+/* CAJAS DE DEMO INTERACTIVA (Estilos base aplicados en JS) */
+.demo-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.demo-box {
+    /* Estilos base de la caja demo */
+    width: 200px; /* Inicial */
+    padding: 20px; /* Inicial */
+    border-width: 10px; /* Inicial */
+    border-style: solid;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    /* Estilos iniciales para la primera carga, el JS los sobreescribe */
+    box-sizing: content-box;
+    border-color: #E91E63;
+    background-color: #37474f;
+    color: #f0f4f8;
+    box-shadow: 0 0 15px rgba(233, 30, 99, 0.7);
+}
+
+.demo-border-box {
+    box-sizing: border-box;
+    /* Los colores iniciales se gestionan en JS para ser dinámicos */
+    box-shadow: 0 0 15px rgba(29, 233, 182, 0.7);
+}
+
+.demo-box p {
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+/* Colores de texto iniciales para resultados */
+.total-content {
+    color: #E91E63; 
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.total-border {
+    color: #1de9b6;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* =====================================
+   RESPONSIVE
+   ===================================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .comparison-grid,
+    .demo-boxes,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .box-wrapper {
+        padding: 1.5rem;
+    }
+
+    .controls {
+        padding: 1rem;
+    }
+
+    .controls label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .controls input[type="range"] {
+        width: 100%;
+    }
+    
+    .box, .demo-box {
+        margin: 0 auto 1rem;
+    }
+
+    .color-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    .color-group {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
